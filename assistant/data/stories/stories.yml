@@ -22,3 +22,11 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+- story: check status
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: incident_status
+  - action: action_incident_status
+

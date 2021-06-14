@@ -67,6 +67,10 @@ responses:
     - text: I am not a weather presenter, but I hope it will be sunny
   utter_chitchat/bot_challenge:
     - text: Yes indeed. I was created by Rasa developer.
+
+actions:
+- action_incident_status
+
 session_config:
   session_expiration_time: 0.0
   carry_over_slots_to_new_session: true
