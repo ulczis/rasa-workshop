@@ -15,7 +15,9 @@ pipeline:
 - name: FallbackClassifier
   threshold: 0.7
   ambiguity_threshold: 0.1
-
+- name: ResponseSelector
+  epochs: 100
+  retrieval_intents: chitchat
 
 
 policies:

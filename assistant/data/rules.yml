@@ -5,5 +5,10 @@ rules:
   - intent: nlu_fallback
   - action: action_default_fallback
 
+- rule: Handle chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
 
 

@@ -13,6 +13,7 @@ intents:
 - restart
 - affirm
 - deny
+- chitchat
 
 
 entities:
@@ -62,7 +63,10 @@ responses:
   - text: Alright, I have cancelled the incident.
   utter_ask_whatelse:
     - text: What else can I help you with?
-
+  utter_chitchat/ask_weather:
+    - text: I am not a weather presenter, but I hope it will be sunny
+  utter_chitchat/bot_challenge:
+    - text: Yes indeed. I was created by Rasa developer.
 session_config:
   session_expiration_time: 0.0
   carry_over_slots_to_new_session: true
