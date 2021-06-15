@@ -83,6 +83,9 @@ nlu:
     - [escalated]{"entity": "priority", "value": "high"}
     - [escalate]{"entity": "priority", "value": "high"}
     - [super high](priority)
+    - [12345](number)
+    - [33221](number)
+    - it's [543](number)
 - intent: out_of_scope
   examples: |
     - what is the square root of 5

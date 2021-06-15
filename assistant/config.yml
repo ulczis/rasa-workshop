@@ -18,6 +18,9 @@ pipeline:
 - name: ResponseSelector
   epochs: 100
   retrieval_intents: chitchat
+- name: DucklingEntityExtractor
+  url: http://localhost:8000
+  dimensions: ["number"]
 
 
 policies:
