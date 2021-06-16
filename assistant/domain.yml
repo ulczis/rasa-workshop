@@ -29,6 +29,8 @@ slots:
     type: any
   number:
     type: any
+  email:
+    type: any
 
 
 responses:

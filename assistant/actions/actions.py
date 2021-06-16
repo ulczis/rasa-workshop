@@ -12,7 +12,11 @@ class IncidentStatus(Action):
     def run(self, dispatcher, tracker, domain):
         data = pd.read_csv('workshop_data.csv')
         user_id = tracker.get_slot('number')
+        
         find_user = data.loc[data['user_id']==user_id]
         status = find_user.incident_number_status.values[0]
+        email = find_user.email.values[0]
+
         dispatcher.utter_message("The status of your ticket is : {}".format(status))
-        return []
+
+        return [SlotSet("email", email)]

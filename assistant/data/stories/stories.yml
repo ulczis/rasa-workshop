@@ -24,13 +24,12 @@ stories:
 
 - story: check status
   steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_help
   - intent: incident_status
   - action: utter_ask_number
   - intent: inform
     entities:
     - number: "12345"
   - action: action_incident_status
+  - slot_was_set:
+    - email: "j@email.com"
 
