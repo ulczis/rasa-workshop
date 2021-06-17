@@ -19,6 +19,7 @@ intents:
 entities:
 - priority
 - number
+- email
 
 slots:
   confirm:
@@ -77,6 +78,39 @@ responses:
 
 actions:
 - action_incident_status
+
+forms:
+  open_incident_form:
+    email:
+      - type: from_entity
+        entity: email
+    problem_description:
+      - type: from_text
+        not_intent:
+          - incident_status
+          - help
+          - affirm
+          - deny
+    incident_title:
+      - type: from_trigger_intent
+        intent: password_reset
+        value: "Problem with password"
+      - type: from_trigger_intent
+        intent: problem_email
+        value: "Problem with email"
+      - type: from_text
+        not_intent:
+          - incident_status
+          - help
+          - affirm
+          - deny
+    confirm:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
 
 session_config:
   session_expiration_time: 0.0

@@ -20,7 +20,7 @@ pipeline:
   retrieval_intents: chitchat
 - name: DucklingEntityExtractor
   url: http://localhost:8000
-  dimensions: ["number"]
+  dimensions: ["number", "email"]
 
 
 policies:

@@ -86,6 +86,9 @@ nlu:
     - [12345](number)
     - [33221](number)
     - it's [543](number)
+    - [a@email.com](email)
+    - [d@gmail.com](email)
+    - it's [john@onet.pl](email)
 - intent: out_of_scope
   examples: |
     - what is the square root of 5
