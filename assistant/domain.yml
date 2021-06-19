@@ -75,9 +75,12 @@ responses:
     - text: Yes indeed. I was created by Rasa developer.
   utter_ask_number:
     - text: What is your user ID?
+  utter_ask_email:
+    - text: What is your email?
 
 actions:
 - action_incident_status
+- action_open_incident
 
 forms:
   open_incident_form:

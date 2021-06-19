@@ -20,3 +20,14 @@ class IncidentStatus(Action):
         dispatcher.utter_message("The status of your ticket is : {}".format(status))
 
         return [SlotSet("email", email)]
+
+
+class OpenIncident(Action):
+
+    def name(self):
+        return 'action_open_incident'
+
+    def run(self, dispatcher, tracker, domain):
+        incident_title = tracker.get_slot('incident_title')
+        dispatcher.utter_message("The ticket for your problem \"{}\" has been opened".format(incident_title))
+        return []
