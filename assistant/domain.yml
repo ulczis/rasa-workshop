@@ -81,6 +81,7 @@ responses:
 actions:
 - action_incident_status
 - action_open_incident
+- validate_open_incident_form
 
 forms:
   open_incident_form:
